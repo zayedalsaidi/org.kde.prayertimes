@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="General">
+        <entry name="useAutoLocation" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="latitude" type="String">
+            <default>23.5880</default>
+        </entry>
+        <entry name="longitude" type="String">
+            <default>58.3829</default>
+        </entry>
+        <entry name="timeFormat" type="String">
+            <default>12h</default>
+        </entry>
+        <entry name="calcMethod" type="String">
+            <default>Oman</default>
+        </entry>
+        <entry name="asrMethod" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="highLatsMethod" type="String">
+            <default>NightMiddle</default>
+        </entry>
+        <entry name="fajrAngle" type="Int">
+            <default>180</default>
+        </entry>
+        <entry name="ishaAngle" type="Int">
+            <default>180</default>
+        </entry>
+        <entry name="fajrOffset" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="dhuhrOffset" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="asrOffset" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="maghribOffset" type="Int">
+            <default>0</default>
+        </entry>
+        <entry name="ishaOffset" type="Int">
+            <default>0</default>
+        </entry>
+    </group>
+</kcfg>

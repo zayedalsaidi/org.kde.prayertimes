@@ -1,0 +1,404 @@
+# Malay translation for org.kde.prayertimes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: org.kde.prayertimes 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-21 21:46+0400\n"
+"PO-Revision-Date: 2026-09-21 21:15+0400\n"
+"Last-Translator: Developer Name <developer@example.com>\n"
+"Language-Team: Malay <kde-i18n-doc@kde.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../contents/ui/configGeneral.qml:58 ../contents/ui/Old_configGeneral.qml:62
+#, kde-format
+msgid "Location"
+msgstr "Lokasi"
+
+#: ../contents/ui/configGeneral.qml:59 ../contents/ui/Old_configGeneral.qml:63
+#, kde-format
+msgid "Appearance"
+msgstr "Penampilan"
+
+#: ../contents/ui/configGeneral.qml:60 ../contents/ui/Old_configGeneral.qml:64
+#, kde-format
+msgid "Calculation"
+msgstr "Pengiraan"
+
+#: ../contents/ui/configGeneral.qml:61 ../contents/ui/Old_configGeneral.qml:65
+#, kde-format
+msgid "About"
+msgstr "Perihal"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:115
+#, kde-format
+msgid "Location Source:"
+msgstr "Sumber Lokasi:"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:116
+#, kde-format
+msgid "Use system location services (Recommended)"
+msgstr "Gunakan perkhidmatan lokasi sistem (Disyorkan)"
+
+#: ../contents/ui/configGeneral.qml:81 ../contents/ui/Old_configGeneral.qml:120
+#, kde-format
+msgid "Latitude:"
+msgstr "Latitud:"
+
+#: ../contents/ui/configGeneral.qml:82 ../contents/ui/Old_configGeneral.qml:126
+#, kde-format
+msgid "Longitude:"
+msgstr "Longitud:"
+
+#: ../contents/ui/configGeneral.qml:83
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the numbers."
+msgstr ""
+"💡 Tip: Buka Google Maps, klik kanan pada lokasi anda, dan salin nombor "
+"tersebut."
+
+#: ../contents/ui/configGeneral.qml:99 ../contents/ui/Old_configGeneral.qml:151
+#, kde-format
+msgid "Time Format:"
+msgstr "Format Masa:"
+
+#: ../contents/ui/configGeneral.qml:102
+#: ../contents/ui/Old_configGeneral.qml:155
+#, kde-format
+msgid "24-hour (e.g., 14:30)"
+msgstr "24-jam (cth. 14:30)"
+
+#: ../contents/ui/configGeneral.qml:103
+#: ../contents/ui/Old_configGeneral.qml:156
+#, kde-format
+msgid "12-hour with AM/PM (e.g., 02:30 PM)"
+msgstr "12-jam dengan AM/PM (cth. 02:30 PM)"
+
+#: ../contents/ui/configGeneral.qml:104
+#: ../contents/ui/Old_configGeneral.qml:157
+#, kde-format
+msgid "12-hour without AM/PM (e.g., 02:30)"
+msgstr "12-jam tanpa AM/PM (cth. 02:30)"
+
+#: ../contents/ui/configGeneral.qml:122
+#: ../contents/ui/Old_configGeneral.qml:175
+#, kde-format
+msgid "Calculation Method:"
+msgstr "Kaedah Pengiraan:"
+
+#: ../contents/ui/configGeneral.qml:125
+#, fuzzy, kde-format
+msgid "🇴 Oman (Official Calendar)"
+msgstr "🇴🇲 Oman (Kalendar Rasmi)"
+
+#: ../contents/ui/configGeneral.qml:126
+#: ../contents/ui/Old_configGeneral.qml:180
+#, kde-format
+msgid "Muslim World League"
+msgstr "Liga Muslim Dunia (MWL)"
+
+#: ../contents/ui/configGeneral.qml:127
+#: ../contents/ui/Old_configGeneral.qml:181
+#, kde-format
+msgid "ISNA (North America)"
+msgstr "ISNA (Amerika Utara)"
+
+#: ../contents/ui/configGeneral.qml:128
+#: ../contents/ui/Old_configGeneral.qml:182
+#, kde-format
+msgid "Egyptian General Authority"
+msgstr "Pihak Berkuasa Umum Ukuran Mesir"
+
+#: ../contents/ui/configGeneral.qml:129
+#: ../contents/ui/Old_configGeneral.qml:183
+#, kde-format
+msgid "Umm Al-Qura (Makkah)"
+msgstr "Umm Al-Qura (Makkah)"
+
+#: ../contents/ui/configGeneral.qml:130
+#: ../contents/ui/Old_configGeneral.qml:184
+#, kde-format
+msgid "University of Islamic Sciences, Karachi"
+msgstr "Universiti Sains Islam, Karachi"
+
+#: ../contents/ui/configGeneral.qml:131
+#: ../contents/ui/Old_configGeneral.qml:185
+#, kde-format
+msgid "Institute of Geophysics, Tehran"
+msgstr "Institut Geofizik, Tehran"
+
+#: ../contents/ui/configGeneral.qml:132
+#: ../contents/ui/Old_configGeneral.qml:186
+#, kde-format
+msgid "Shia Ithna-Ashari (Jafari)"
+msgstr "Syi'ah Ithna-Ashari (Jafari)"
+
+#: ../contents/ui/configGeneral.qml:133
+#: ../contents/ui/Old_configGeneral.qml:187
+#, kde-format
+msgid "France"
+msgstr "Perancis"
+
+#: ../contents/ui/configGeneral.qml:134
+#: ../contents/ui/Old_configGeneral.qml:188
+#, kde-format
+msgid "Russia"
+msgstr "Rusia"
+
+#: ../contents/ui/configGeneral.qml:135
+#: ../contents/ui/Old_configGeneral.qml:189
+#, kde-format
+msgid "Malaysia (JAKIM)"
+msgstr "Malaysia (JAKIM)"
+
+#: ../contents/ui/configGeneral.qml:136
+#: ../contents/ui/Old_configGeneral.qml:190
+#, kde-format
+msgid "Singapore"
+msgstr "Singapura"
+
+#: ../contents/ui/configGeneral.qml:137
+#: ../contents/ui/Old_configGeneral.qml:191
+#, kde-format
+msgid "Custom Angles"
+msgstr "Sudut Tersuai"
+
+#: ../contents/ui/configGeneral.qml:142
+#: ../contents/ui/Old_configGeneral.qml:196
+#, kde-format
+msgid "Asr Juristic Method:"
+msgstr "Kaedah Fikah Asar:"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:198
+#, kde-format
+msgid "Standard (Shafi, Maliki, Hanbali)"
+msgstr "Standard (Syafi'i, Maliki, Hanbali)"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:199
+#, kde-format
+msgid "Hanafi"
+msgstr "Hanafi"
+
+#: ../contents/ui/configGeneral.qml:147
+#: ../contents/ui/Old_configGeneral.qml:204
+#, kde-format
+msgid "Higher Latitudes Method:"
+msgstr "Kaedah Latitud Tinggi:"
+
+#: ../contents/ui/configGeneral.qml:150
+#: ../contents/ui/Old_configGeneral.qml:208
+#, kde-format
+msgid "Night Middle (Recommended)"
+msgstr "Tengah Malam (Disyorkan)"
+
+#: ../contents/ui/configGeneral.qml:151
+#: ../contents/ui/Old_configGeneral.qml:209
+#, kde-format
+msgid "One-Seventh of Night"
+msgstr "Satu Pertujuh Malam"
+
+#: ../contents/ui/configGeneral.qml:152
+#: ../contents/ui/Old_configGeneral.qml:210
+#, kde-format
+msgid "Angle-Based"
+msgstr "Berasaskan Sudut"
+
+#: ../contents/ui/configGeneral.qml:153
+#: ../contents/ui/Old_configGeneral.qml:211
+#, kde-format
+msgid "None (No Adjustment)"
+msgstr "Tiada (Tiada Pelarasan)"
+
+#: ../contents/ui/configGeneral.qml:156
+#: ../contents/ui/Old_configGeneral.qml:217
+#, kde-format
+msgid "Manual Time Adjustments (Offsets)"
+msgstr "Pelarasan Masa Manual (Ofset)"
+
+#: ../contents/ui/configGeneral.qml:157
+#: ../contents/ui/Old_configGeneral.qml:219
+#, kde-format
+msgid "Fajr Offset (min):"
+msgstr "Ofset Subuh (min):"
+
+#: ../contents/ui/configGeneral.qml:158
+#: ../contents/ui/Old_configGeneral.qml:220
+#, kde-format
+msgid "Dhuhr Offset (min):"
+msgstr "Ofset Zohor (min):"
+
+#: ../contents/ui/configGeneral.qml:159
+#: ../contents/ui/Old_configGeneral.qml:221
+#, kde-format
+msgid "Asr Offset (min):"
+msgstr "Ofset Asar (min):"
+
+#: ../contents/ui/configGeneral.qml:160
+#: ../contents/ui/Old_configGeneral.qml:222
+#, kde-format
+msgid "Maghrib Offset (min):"
+msgstr "Ofset Maghrib (min):"
+
+#: ../contents/ui/configGeneral.qml:161
+#: ../contents/ui/Old_configGeneral.qml:223
+#, kde-format
+msgid "Isha Offset (min):"
+msgstr "Ofset Isyak (min):"
+
+#: ../contents/ui/configGeneral.qml:162
+#: ../contents/ui/Old_configGeneral.qml:227
+#, kde-format
+msgid "Custom Calculation Angles"
+msgstr "Sudut Pengiraan Tersuai"
+
+#: ../contents/ui/configGeneral.qml:163
+#: ../contents/ui/Old_configGeneral.qml:229
+#, kde-format
+msgid "Fajr Angle (x10):"
+msgstr "Sudut Subuh (x10):"
+
+#: ../contents/ui/configGeneral.qml:164
+#: ../contents/ui/Old_configGeneral.qml:230
+#, kde-format
+msgid "Isha Angle (x10):"
+msgstr "Sudut Isyak (x10):"
+
+#: ../contents/ui/configGeneral.qml:180
+#: ../contents/ui/Old_configGeneral.qml:245
+#, kde-format
+msgid "Prayer Times Plasmoid"
+msgstr "Plasmoid Waktu Solat"
+
+#: ../contents/ui/configGeneral.qml:181
+#: ../contents/ui/Old_configGeneral.qml:246
+#, kde-format
+msgid "Developer: Zayed Al-Saidi"
+msgstr "Pembangun: Zayed Al-Saidi"
+
+#: ../contents/ui/configGeneral.qml:182
+#: ../contents/ui/Old_configGeneral.qml:247
+#, kde-format
+msgid "License: GPL-3.0-or-later"
+msgstr "Lesen: GPL-3.0-atau-kemudian"
+
+#: ../contents/ui/configGeneral.qml:183
+#: ../contents/ui/Old_configGeneral.qml:248
+#, kde-format
+msgid "Version: 1.0.0"
+msgstr "Versi: 1.0.0"
+
+#: ../contents/ui/configGeneral.qml:187
+#: ../contents/ui/Old_configGeneral.qml:252
+#, kde-format
+msgid "Powered by PrayTime.js"
+msgstr "Dikuasai oleh PrayTime.js"
+
+#: ../contents/ui/configGeneral.qml:189
+#: ../contents/ui/Old_configGeneral.qml:254
+#, kde-format
+msgid ""
+"Note: PrayTime.js has been slightly modified to ensure full compatibility "
+"with the Qt/QML environment."
+msgstr ""
+"Nota: PrayTime.js telah diubah sedikit untuk memastikan keserasian penuh "
+"dengan persekitaran Qt/QML."
+
+#: ../contents/ui/configGeneral.qml:194
+#: ../contents/ui/Old_configGeneral.qml:260
+#, kde-format
+msgid "Official Website"
+msgstr "Laman Web Rasmi"
+
+#: ../contents/ui/configGeneral.qml:195
+#: ../contents/ui/Old_configGeneral.qml:265
+#, kde-format
+msgid "Calculation Documentation"
+msgstr "Dokumentasi Pengiraan"
+
+#: ../contents/ui/configGeneral.qml:196
+#: ../contents/ui/Old_configGeneral.qml:270
+#, kde-format
+msgid "Source Code (GitHub)"
+msgstr "Kod Sumber (GitHub)"
+
+#: ../contents/ui/configGeneral.qml:197
+#: ../contents/ui/Old_configGeneral.qml:274
+#, kde-format
+msgid "PrayTime.js License: MIT License"
+msgstr "Lesen PrayTime.js: Lesen MIT"
+
+#: ../contents/ui/main.qml:33
+#, kde-format
+msgid "Fajr"
+msgstr "Subuh"
+
+#: ../contents/ui/main.qml:34
+#, kde-format
+msgid "Sunrise"
+msgstr "Syuruk"
+
+#: ../contents/ui/main.qml:35
+#, kde-format
+msgid "Dhuhr"
+msgstr "Zohor"
+
+#: ../contents/ui/main.qml:36
+#, kde-format
+msgid "Asr"
+msgstr "Asar"
+
+#: ../contents/ui/main.qml:37
+#, kde-format
+msgid "Maghrib"
+msgstr "Maghrib"
+
+#: ../contents/ui/main.qml:38
+#, kde-format
+msgid "Isha"
+msgstr "Isyak"
+
+#: ../contents/ui/main.qml:235
+#, kde-format
+msgid "Next Prayer"
+msgstr "Solat Seterusnya"
+
+#: ../contents/ui/main.qml:269
+#, kde-format
+msgid "remaining"
+msgstr "tinggal"
+
+#: ../contents/ui/main.qml:358
+#, kde-format
+msgid "Location: "
+msgstr "Lokasi: "
+
+#: ../contents/ui/Old_configGeneral.qml:134
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the "
+"numbers. Use a dot (.) for decimals."
+msgstr ""
+"💡 Tip: Buka Google Maps, klik kanan pada lokasi anda, dan salin nombor "
+"tersebut. Gunakan titik (.) untuk perpuluhan."
+
+#: ../contents/ui/Old_configGeneral.qml:179
+#, kde-format
+msgid "🇴🇲 Oman (Official Calendar)"
+msgstr "🇴🇲 Oman (Kalendar Rasmi)"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "PM"
+msgstr "PM"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "AM"
+msgstr "AM"

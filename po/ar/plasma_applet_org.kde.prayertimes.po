@@ -1,0 +1,406 @@
+# Arabic translation for org.kde.prayertimes
+#
+# SPDX-FileCopyrightText: 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: org.kde.prayertimes 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-21 21:46+0400\n"
+"PO-Revision-Date: 2026-09-21 20:50+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 25.12.3\n"
+
+#: ../contents/ui/configGeneral.qml:58 ../contents/ui/Old_configGeneral.qml:62
+#, kde-format
+msgid "Location"
+msgstr "الموقع"
+
+#: ../contents/ui/configGeneral.qml:59 ../contents/ui/Old_configGeneral.qml:63
+#, kde-format
+msgid "Appearance"
+msgstr "المظهر"
+
+#: ../contents/ui/configGeneral.qml:60 ../contents/ui/Old_configGeneral.qml:64
+#, kde-format
+msgid "Calculation"
+msgstr "الحساب"
+
+#: ../contents/ui/configGeneral.qml:61 ../contents/ui/Old_configGeneral.qml:65
+#, kde-format
+msgid "About"
+msgstr "عن"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:115
+#, kde-format
+msgid "Location Source:"
+msgstr "مصدر الموقع:"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:116
+#, kde-format
+msgid "Use system location services (Recommended)"
+msgstr "استخدام خدمات الموقع بالنظام (موصى به)"
+
+#: ../contents/ui/configGeneral.qml:81 ../contents/ui/Old_configGeneral.qml:120
+#, kde-format
+msgid "Latitude:"
+msgstr "خط العرض:"
+
+#: ../contents/ui/configGeneral.qml:82 ../contents/ui/Old_configGeneral.qml:126
+#, kde-format
+msgid "Longitude:"
+msgstr "خط الطول:"
+
+#: ../contents/ui/configGeneral.qml:83
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the numbers."
+msgstr ""
+"💡 تلميحة: افتح خرائط جوجل، وانقر بالزر الأيمن على موقعك، ثم انسخ الأرقام."
+
+#: ../contents/ui/configGeneral.qml:99 ../contents/ui/Old_configGeneral.qml:151
+#, kde-format
+msgid "Time Format:"
+msgstr "تنسيق الوقت:"
+
+#: ../contents/ui/configGeneral.qml:102
+#: ../contents/ui/Old_configGeneral.qml:155
+#, kde-format
+msgid "24-hour (e.g., 14:30)"
+msgstr "24 ساعة (مثال: 14:30)"
+
+#: ../contents/ui/configGeneral.qml:103
+#: ../contents/ui/Old_configGeneral.qml:156
+#, kde-format
+msgid "12-hour with AM/PM (e.g., 02:30 PM)"
+msgstr "12 ساعة مع م/ص (مثال: 02:30 م)"
+
+#: ../contents/ui/configGeneral.qml:104
+#: ../contents/ui/Old_configGeneral.qml:157
+#, kde-format
+msgid "12-hour without AM/PM (e.g., 02:30)"
+msgstr "12 ساعة بدون م/ص (مثال: 02:30)"
+
+#: ../contents/ui/configGeneral.qml:122
+#: ../contents/ui/Old_configGeneral.qml:175
+#, kde-format
+msgid "Calculation Method:"
+msgstr "معيار الحساب:"
+
+#: ../contents/ui/configGeneral.qml:125
+#, fuzzy, kde-format
+msgid "🇴 Oman (Official Calendar)"
+msgstr "🇴🇲 سلطنة عمان (التقويم الرسمي)"
+
+#: ../contents/ui/configGeneral.qml:126
+#: ../contents/ui/Old_configGeneral.qml:180
+#, kde-format
+msgid "Muslim World League"
+msgstr "رابطة العالم الإسلامي"
+
+#: ../contents/ui/configGeneral.qml:127
+#: ../contents/ui/Old_configGeneral.qml:181
+#, kde-format
+msgid "ISNA (North America)"
+msgstr "الاتحاد الإسلامي لشمال أمريكا (ISNA)"
+
+#: ../contents/ui/configGeneral.qml:128
+#: ../contents/ui/Old_configGeneral.qml:182
+#, kde-format
+msgid "Egyptian General Authority"
+msgstr "الهيئة المصرية العامة للمساحة"
+
+#: ../contents/ui/configGeneral.qml:129
+#: ../contents/ui/Old_configGeneral.qml:183
+#, kde-format
+msgid "Umm Al-Qura (Makkah)"
+msgstr "أم القرى (مكة المكرمة)"
+
+#: ../contents/ui/configGeneral.qml:130
+#: ../contents/ui/Old_configGeneral.qml:184
+#, kde-format
+msgid "University of Islamic Sciences, Karachi"
+msgstr "جامعة العلوم الإسلامية بكراتشي"
+
+#: ../contents/ui/configGeneral.qml:131
+#: ../contents/ui/Old_configGeneral.qml:185
+#, kde-format
+msgid "Institute of Geophysics, Tehran"
+msgstr "معهد الجيوفيزياء بجامعة طهران"
+
+#: ../contents/ui/configGeneral.qml:132
+#: ../contents/ui/Old_configGeneral.qml:186
+#, kde-format
+msgid "Shia Ithna-Ashari (Jafari)"
+msgstr "الشيعة الإثنا عشرية (الجعفري)"
+
+#: ../contents/ui/configGeneral.qml:133
+#: ../contents/ui/Old_configGeneral.qml:187
+#, kde-format
+msgid "France"
+msgstr "فرنسا"
+
+#: ../contents/ui/configGeneral.qml:134
+#: ../contents/ui/Old_configGeneral.qml:188
+#, kde-format
+msgid "Russia"
+msgstr "روسيا"
+
+#: ../contents/ui/configGeneral.qml:135
+#: ../contents/ui/Old_configGeneral.qml:189
+#, kde-format
+msgid "Malaysia (JAKIM)"
+msgstr "ماليزيا (JAKIM)"
+
+#: ../contents/ui/configGeneral.qml:136
+#: ../contents/ui/Old_configGeneral.qml:190
+#, kde-format
+msgid "Singapore"
+msgstr "سنغافورة"
+
+#: ../contents/ui/configGeneral.qml:137
+#: ../contents/ui/Old_configGeneral.qml:191
+#, kde-format
+msgid "Custom Angles"
+msgstr "زوايا مخصصة"
+
+#: ../contents/ui/configGeneral.qml:142
+#: ../contents/ui/Old_configGeneral.qml:196
+#, kde-format
+msgid "Asr Juristic Method:"
+msgstr "مذهب صلاة العصر:"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:198
+#, kde-format
+msgid "Standard (Shafi, Maliki, Hanbali)"
+msgstr "الجمهور (الشافعي، المالكي، الحنبلي)"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:199
+#, kde-format
+msgid "Hanafi"
+msgstr "الحنفي"
+
+#: ../contents/ui/configGeneral.qml:147
+#: ../contents/ui/Old_configGeneral.qml:204
+#, kde-format
+msgid "Higher Latitudes Method:"
+msgstr "معيار خطوط العرض العليا:"
+
+#: ../contents/ui/configGeneral.qml:150
+#: ../contents/ui/Old_configGeneral.qml:208
+#, kde-format
+msgid "Night Middle (Recommended)"
+msgstr "منتصف الليل (موصى به)"
+
+#: ../contents/ui/configGeneral.qml:151
+#: ../contents/ui/Old_configGeneral.qml:209
+#, kde-format
+msgid "One-Seventh of Night"
+msgstr "سُبع الليل"
+
+#: ../contents/ui/configGeneral.qml:152
+#: ../contents/ui/Old_configGeneral.qml:210
+#, kde-format
+msgid "Angle-Based"
+msgstr "تعديل يعتمد على الزاوية"
+
+#: ../contents/ui/configGeneral.qml:153
+#: ../contents/ui/Old_configGeneral.qml:211
+#, kde-format
+msgid "None (No Adjustment)"
+msgstr "بلا (دون تعديل)"
+
+#: ../contents/ui/configGeneral.qml:156
+#: ../contents/ui/Old_configGeneral.qml:217
+#, kde-format
+msgid "Manual Time Adjustments (Offsets)"
+msgstr "تعديل الأوقات يدويًا (إزاحة)"
+
+#: ../contents/ui/configGeneral.qml:157
+#: ../contents/ui/Old_configGeneral.qml:219
+#, kde-format
+msgid "Fajr Offset (min):"
+msgstr "تعديل وقت الفجر (دقيقة):"
+
+#: ../contents/ui/configGeneral.qml:158
+#: ../contents/ui/Old_configGeneral.qml:220
+#, kde-format
+msgid "Dhuhr Offset (min):"
+msgstr "تعديل وقت الظهر (دقيقة):"
+
+#: ../contents/ui/configGeneral.qml:159
+#: ../contents/ui/Old_configGeneral.qml:221
+#, kde-format
+msgid "Asr Offset (min):"
+msgstr "تعديل وقت العصر (دقيقة):"
+
+#: ../contents/ui/configGeneral.qml:160
+#: ../contents/ui/Old_configGeneral.qml:222
+#, kde-format
+msgid "Maghrib Offset (min):"
+msgstr "تعديل وقت المغرب (دقيقة):"
+
+#: ../contents/ui/configGeneral.qml:161
+#: ../contents/ui/Old_configGeneral.qml:223
+#, kde-format
+msgid "Isha Offset (min):"
+msgstr "تعديل وقت العشاء (دقيقة):"
+
+#: ../contents/ui/configGeneral.qml:162
+#: ../contents/ui/Old_configGeneral.qml:227
+#, kde-format
+msgid "Custom Calculation Angles"
+msgstr "زوايا الحساب المخصصة"
+
+#: ../contents/ui/configGeneral.qml:163
+#: ../contents/ui/Old_configGeneral.qml:229
+#, kde-format
+msgid "Fajr Angle (x10):"
+msgstr "زاوية الفجر (×10):"
+
+#: ../contents/ui/configGeneral.qml:164
+#: ../contents/ui/Old_configGeneral.qml:230
+#, kde-format
+msgid "Isha Angle (x10):"
+msgstr "زاوية العشاء (×10):"
+
+#: ../contents/ui/configGeneral.qml:180
+#: ../contents/ui/Old_configGeneral.qml:245
+#, kde-format
+msgid "Prayer Times Plasmoid"
+msgstr "بلازمويد مواقيت الصلاة"
+
+#: ../contents/ui/configGeneral.qml:181
+#: ../contents/ui/Old_configGeneral.qml:246
+#, kde-format
+msgid "Developer: Zayed Al-Saidi"
+msgstr "المطور: زايد السعيدي"
+
+#: ../contents/ui/configGeneral.qml:182
+#: ../contents/ui/Old_configGeneral.qml:247
+#, kde-format
+msgid "License: GPL-3.0-or-later"
+msgstr "الرخصة: GPL-3.0-أو-أحدث"
+
+#: ../contents/ui/configGeneral.qml:183
+#: ../contents/ui/Old_configGeneral.qml:248
+#, kde-format
+msgid "Version: 1.0.0"
+msgstr "الإصدار: 1.0.0"
+
+#: ../contents/ui/configGeneral.qml:187
+#: ../contents/ui/Old_configGeneral.qml:252
+#, kde-format
+msgid "Powered by PrayTime.js"
+msgstr "يعمل باستخدام PrayTime.js"
+
+#: ../contents/ui/configGeneral.qml:189
+#: ../contents/ui/Old_configGeneral.qml:254
+#, kde-format
+msgid ""
+"Note: PrayTime.js has been slightly modified to ensure full compatibility "
+"with the Qt/QML environment."
+msgstr ""
+"ملاحظة: عُدلت مكتبة PrayTime.js تعديلًا طفيفًا لضمان التوافق التام مع بيئة Qt/"
+"QML."
+
+#: ../contents/ui/configGeneral.qml:194
+#: ../contents/ui/Old_configGeneral.qml:260
+#, kde-format
+msgid "Official Website"
+msgstr "الموقع الرسمي"
+
+#: ../contents/ui/configGeneral.qml:195
+#: ../contents/ui/Old_configGeneral.qml:265
+#, kde-format
+msgid "Calculation Documentation"
+msgstr "توثيق حساب المواقيت"
+
+#: ../contents/ui/configGeneral.qml:196
+#: ../contents/ui/Old_configGeneral.qml:270
+#, kde-format
+msgid "Source Code (GitHub)"
+msgstr "الشيفرة المصدرية (GitHub)"
+
+#: ../contents/ui/configGeneral.qml:197
+#: ../contents/ui/Old_configGeneral.qml:274
+#, kde-format
+msgid "PrayTime.js License: MIT License"
+msgstr "رخصة PrayTime.js: رخصة MIT"
+
+#: ../contents/ui/main.qml:33
+#, kde-format
+msgid "Fajr"
+msgstr "الفجر"
+
+#: ../contents/ui/main.qml:34
+#, kde-format
+msgid "Sunrise"
+msgstr "الشروق"
+
+#: ../contents/ui/main.qml:35
+#, kde-format
+msgid "Dhuhr"
+msgstr "الظهر"
+
+#: ../contents/ui/main.qml:36
+#, kde-format
+msgid "Asr"
+msgstr "العصر"
+
+#: ../contents/ui/main.qml:37
+#, kde-format
+msgid "Maghrib"
+msgstr "المغرب"
+
+#: ../contents/ui/main.qml:38
+#, kde-format
+msgid "Isha"
+msgstr "العشاء"
+
+#: ../contents/ui/main.qml:235
+#, kde-format
+msgid "Next Prayer"
+msgstr "الصلاة القادمة"
+
+#: ../contents/ui/main.qml:269
+#, kde-format
+msgid "remaining"
+msgstr "متبقٍ"
+
+#: ../contents/ui/main.qml:358
+#, kde-format
+msgid "Location: "
+msgstr "الموقع: "
+
+#: ../contents/ui/Old_configGeneral.qml:134
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the "
+"numbers. Use a dot (.) for decimals."
+msgstr ""
+"💡 تلميحة: افتح خرائط جوجل، وانقر بالزر الأيمن على موقعك، ثم انسخ الأرقام. "
+"استخدم النقطة (.) للكسور العشرية."
+
+#: ../contents/ui/Old_configGeneral.qml:179
+#, kde-format
+msgid "🇴🇲 Oman (Official Calendar)"
+msgstr "🇴🇲 سلطنة عمان (التقويم الرسمي)"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "PM"
+msgstr "م"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "AM"
+msgstr "ص"

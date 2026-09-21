@@ -1,0 +1,26 @@
+{
+    "KPlugin": {
+        "Name": "Prayer Times",
+        "Name[ar]": "مواقيت الصلاة",
+        "Description": "Offline Islamic Prayer Times Applet with manual location coordinates and system positioning",
+        "Description[ar]": "بريمج مواقيت الصلاة الإسلامية يعمل دون إنترنت مع دعم التحديد الآلي للموقع أو الإدخال اليدوي للإحداثيات",
+        "Icon": "environment-symbolic",
+        "Id": "org.kde.prayertimes",
+        "License": "GPL-3.0-or-later",
+        "Authors": [
+            {
+                "Name": "Zayed Al-Saidi",
+                "Email": "zayed.alsaidi@gmail.com"
+            }
+        ],
+        "Category": "Utilities",
+        "Version": "1.0.0",
+        "Website": "https://github.com/zayedalsaidi/org.kde.prayertimes"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.time"
+    ]
+}

@@ -1,0 +1,403 @@
+# Urdu translation for org.kde.prayertimes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: org.kde.prayertimes 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-21 21:46+0400\n"
+"PO-Revision-Date: 2026-09-21 21:00+0400\n"
+"Last-Translator: Developer Name <developer@example.com>\n"
+"Language-Team: Urdu <kde-i18n-ur@kde.org>\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../contents/ui/configGeneral.qml:58 ../contents/ui/Old_configGeneral.qml:62
+#, kde-format
+msgid "Location"
+msgstr "مقام"
+
+#: ../contents/ui/configGeneral.qml:59 ../contents/ui/Old_configGeneral.qml:63
+#, kde-format
+msgid "Appearance"
+msgstr "مظہر"
+
+#: ../contents/ui/configGeneral.qml:60 ../contents/ui/Old_configGeneral.qml:64
+#, kde-format
+msgid "Calculation"
+msgstr "حساب"
+
+#: ../contents/ui/configGeneral.qml:61 ../contents/ui/Old_configGeneral.qml:65
+#, kde-format
+msgid "About"
+msgstr "عن"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:115
+#, kde-format
+msgid "Location Source:"
+msgstr "مقام کا ذریعہ:"
+
+#: ../contents/ui/configGeneral.qml:80 ../contents/ui/Old_configGeneral.qml:116
+#, kde-format
+msgid "Use system location services (Recommended)"
+msgstr "سسٹم کی مقام کی خدمات استعمال کریں (تجویز کردہ)"
+
+#: ../contents/ui/configGeneral.qml:81 ../contents/ui/Old_configGeneral.qml:120
+#, kde-format
+msgid "Latitude:"
+msgstr "عرض بلد:"
+
+#: ../contents/ui/configGeneral.qml:82 ../contents/ui/Old_configGeneral.qml:126
+#, kde-format
+msgid "Longitude:"
+msgstr "طول بلد:"
+
+#: ../contents/ui/configGeneral.qml:83
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the numbers."
+msgstr ""
+"💡 مشورہ: گوگل میپس کھولیں، اپنے مقام پر رائٹ کلک کریں اور اعداد کاپی کریں۔"
+
+#: ../contents/ui/configGeneral.qml:99 ../contents/ui/Old_configGeneral.qml:151
+#, kde-format
+msgid "Time Format:"
+msgstr "وقت کا فارمیٹ:"
+
+#: ../contents/ui/configGeneral.qml:102
+#: ../contents/ui/Old_configGeneral.qml:155
+#, kde-format
+msgid "24-hour (e.g., 14:30)"
+msgstr "24 گھنٹے (مثلاً 14:30)"
+
+#: ../contents/ui/configGeneral.qml:103
+#: ../contents/ui/Old_configGeneral.qml:156
+#, kde-format
+msgid "12-hour with AM/PM (e.g., 02:30 PM)"
+msgstr "12 گھنٹے AM/PM کے ساتھ (مثلاً 02:30 PM)"
+
+#: ../contents/ui/configGeneral.qml:104
+#: ../contents/ui/Old_configGeneral.qml:157
+#, kde-format
+msgid "12-hour without AM/PM (e.g., 02:30)"
+msgstr "12 گھنٹے AM/PM کے بغیر (مثلاً 02:30)"
+
+#: ../contents/ui/configGeneral.qml:122
+#: ../contents/ui/Old_configGeneral.qml:175
+#, kde-format
+msgid "Calculation Method:"
+msgstr "حساب کا طریقہ:"
+
+#: ../contents/ui/configGeneral.qml:125
+#, fuzzy, kde-format
+msgid "🇴 Oman (Official Calendar)"
+msgstr "🇴🇲 عمان (سرکاری تقویم)"
+
+#: ../contents/ui/configGeneral.qml:126
+#: ../contents/ui/Old_configGeneral.qml:180
+#, kde-format
+msgid "Muslim World League"
+msgstr "رابطہ عالم اسلامی"
+
+#: ../contents/ui/configGeneral.qml:127
+#: ../contents/ui/Old_configGeneral.qml:181
+#, kde-format
+msgid "ISNA (North America)"
+msgstr "اسلامک سوسائٹی آف نارتھ امریکہ (ISNA)"
+
+#: ../contents/ui/configGeneral.qml:128
+#: ../contents/ui/Old_configGeneral.qml:182
+#, kde-format
+msgid "Egyptian General Authority"
+msgstr "مصری عمومی اتھارٹی برائے سروے"
+
+#: ../contents/ui/configGeneral.qml:129
+#: ../contents/ui/Old_configGeneral.qml:183
+#, kde-format
+msgid "Umm Al-Qura (Makkah)"
+msgstr "ام القریٰ (مکہ مکرمہ)"
+
+#: ../contents/ui/configGeneral.qml:130
+#: ../contents/ui/Old_configGeneral.qml:184
+#, kde-format
+msgid "University of Islamic Sciences, Karachi"
+msgstr "جامعۃ العلوم الاسلامیہ، کراچی"
+
+#: ../contents/ui/configGeneral.qml:131
+#: ../contents/ui/Old_configGeneral.qml:185
+#, kde-format
+msgid "Institute of Geophysics, Tehran"
+msgstr "انسٹی ٹیوٹ آف جیو فزکس، تہران"
+
+#: ../contents/ui/configGeneral.qml:132
+#: ../contents/ui/Old_configGeneral.qml:186
+#, kde-format
+msgid "Shia Ithna-Ashari (Jafari)"
+msgstr "شیعہ اثنا عشری (جعفری)"
+
+#: ../contents/ui/configGeneral.qml:133
+#: ../contents/ui/Old_configGeneral.qml:187
+#, kde-format
+msgid "France"
+msgstr "فرانس"
+
+#: ../contents/ui/configGeneral.qml:134
+#: ../contents/ui/Old_configGeneral.qml:188
+#, kde-format
+msgid "Russia"
+msgstr "روس"
+
+#: ../contents/ui/configGeneral.qml:135
+#: ../contents/ui/Old_configGeneral.qml:189
+#, kde-format
+msgid "Malaysia (JAKIM)"
+msgstr "ملائیشیا (JAKIM)"
+
+#: ../contents/ui/configGeneral.qml:136
+#: ../contents/ui/Old_configGeneral.qml:190
+#, kde-format
+msgid "Singapore"
+msgstr "سنگاپور"
+
+#: ../contents/ui/configGeneral.qml:137
+#: ../contents/ui/Old_configGeneral.qml:191
+#, kde-format
+msgid "Custom Angles"
+msgstr "مرضی کے زاویے"
+
+#: ../contents/ui/configGeneral.qml:142
+#: ../contents/ui/Old_configGeneral.qml:196
+#, kde-format
+msgid "Asr Juristic Method:"
+msgstr "عصر کا فقہی طریقہ:"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:198
+#, kde-format
+msgid "Standard (Shafi, Maliki, Hanbali)"
+msgstr "جمہور (شافعی، مالکی، حنبلی)"
+
+#: ../contents/ui/configGeneral.qml:143
+#: ../contents/ui/Old_configGeneral.qml:199
+#, kde-format
+msgid "Hanafi"
+msgstr "حنفی"
+
+#: ../contents/ui/configGeneral.qml:147
+#: ../contents/ui/Old_configGeneral.qml:204
+#, kde-format
+msgid "Higher Latitudes Method:"
+msgstr "بلند عرض بلد کا طریقہ:"
+
+#: ../contents/ui/configGeneral.qml:150
+#: ../contents/ui/Old_configGeneral.qml:208
+#, kde-format
+msgid "Night Middle (Recommended)"
+msgstr "نصف رات (تجویز کردہ)"
+
+#: ../contents/ui/configGeneral.qml:151
+#: ../contents/ui/Old_configGeneral.qml:209
+#, kde-format
+msgid "One-Seventh of Night"
+msgstr "رات کا ساتواں حصہ"
+
+#: ../contents/ui/configGeneral.qml:152
+#: ../contents/ui/Old_configGeneral.qml:210
+#, kde-format
+msgid "Angle-Based"
+msgstr "زاویہ پر مبنی"
+
+#: ../contents/ui/configGeneral.qml:153
+#: ../contents/ui/Old_configGeneral.qml:211
+#, kde-format
+msgid "None (No Adjustment)"
+msgstr "کوئی نہیں (بغیر تبدیلی)"
+
+#: ../contents/ui/configGeneral.qml:156
+#: ../contents/ui/Old_configGeneral.qml:217
+#, kde-format
+msgid "Manual Time Adjustments (Offsets)"
+msgstr "وقت میں دستی تبدیلی"
+
+#: ../contents/ui/configGeneral.qml:157
+#: ../contents/ui/Old_configGeneral.qml:219
+#, kde-format
+msgid "Fajr Offset (min):"
+msgstr "فجر کے وقت میں تبدیلی (منٹ):"
+
+#: ../contents/ui/configGeneral.qml:158
+#: ../contents/ui/Old_configGeneral.qml:220
+#, kde-format
+msgid "Dhuhr Offset (min):"
+msgstr "ظہر کے وقت میں تبدیلی (منٹ):"
+
+#: ../contents/ui/configGeneral.qml:159
+#: ../contents/ui/Old_configGeneral.qml:221
+#, kde-format
+msgid "Asr Offset (min):"
+msgstr "عصر کے وقت میں تبدیلی (منٹ):"
+
+#: ../contents/ui/configGeneral.qml:160
+#: ../contents/ui/Old_configGeneral.qml:222
+#, kde-format
+msgid "Maghrib Offset (min):"
+msgstr "مغرب کے وقت میں تبدیلی (منٹ):"
+
+#: ../contents/ui/configGeneral.qml:161
+#: ../contents/ui/Old_configGeneral.qml:223
+#, kde-format
+msgid "Isha Offset (min):"
+msgstr "عشاء کے وقت میں تبدیلی (منٹ):"
+
+#: ../contents/ui/configGeneral.qml:162
+#: ../contents/ui/Old_configGeneral.qml:227
+#, kde-format
+msgid "Custom Calculation Angles"
+msgstr "حساب کے مخصص زاویے"
+
+#: ../contents/ui/configGeneral.qml:163
+#: ../contents/ui/Old_configGeneral.qml:229
+#, kde-format
+msgid "Fajr Angle (x10):"
+msgstr "فجر کا زاویہ (x10):"
+
+#: ../contents/ui/configGeneral.qml:164
+#: ../contents/ui/Old_configGeneral.qml:230
+#, kde-format
+msgid "Isha Angle (x10):"
+msgstr "عشاء کا زاویہ (x10):"
+
+#: ../contents/ui/configGeneral.qml:180
+#: ../contents/ui/Old_configGeneral.qml:245
+#, kde-format
+msgid "Prayer Times Plasmoid"
+msgstr "اوقاتِ نماز پلازمائڈ"
+
+#: ../contents/ui/configGeneral.qml:181
+#: ../contents/ui/Old_configGeneral.qml:246
+#, kde-format
+msgid "Developer: Zayed Al-Saidi"
+msgstr "ڈویلپر: زايد السعیدی"
+
+#: ../contents/ui/configGeneral.qml:182
+#: ../contents/ui/Old_configGeneral.qml:247
+#, kde-format
+msgid "License: GPL-3.0-or-later"
+msgstr "لائسنس: GPL-3.0-یا-بعد کا"
+
+#: ../contents/ui/configGeneral.qml:183
+#: ../contents/ui/Old_configGeneral.qml:248
+#, kde-format
+msgid "Version: 1.0.0"
+msgstr "ورژن: 1.0.0"
+
+#: ../contents/ui/configGeneral.qml:187
+#: ../contents/ui/Old_configGeneral.qml:252
+#, kde-format
+msgid "Powered by PrayTime.js"
+msgstr "PrayTime.js کے ذریعہ فراہم کردہ"
+
+#: ../contents/ui/configGeneral.qml:189
+#: ../contents/ui/Old_configGeneral.qml:254
+#, kde-format
+msgid ""
+"Note: PrayTime.js has been slightly modified to ensure full compatibility "
+"with the Qt/QML environment."
+msgstr ""
+"نوٹ: Qt/QML ماحول کے ساتھ مکمل مطابقت یقینی بنانے کے لیے PrayTime.js میں "
+"معمولی تبدیلی کی گئی ہے۔"
+
+#: ../contents/ui/configGeneral.qml:194
+#: ../contents/ui/Old_configGeneral.qml:260
+#, kde-format
+msgid "Official Website"
+msgstr "سرکاری ویب سائٹ"
+
+#: ../contents/ui/configGeneral.qml:195
+#: ../contents/ui/Old_configGeneral.qml:265
+#, kde-format
+msgid "Calculation Documentation"
+msgstr "حساب کی دستاویزات"
+
+#: ../contents/ui/configGeneral.qml:196
+#: ../contents/ui/Old_configGeneral.qml:270
+#, kde-format
+msgid "Source Code (GitHub)"
+msgstr "سورس کوڈ (GitHub)"
+
+#: ../contents/ui/configGeneral.qml:197
+#: ../contents/ui/Old_configGeneral.qml:274
+#, kde-format
+msgid "PrayTime.js License: MIT License"
+msgstr "PrayTime.js لائسنس: MIT لائسنس"
+
+#: ../contents/ui/main.qml:33
+#, kde-format
+msgid "Fajr"
+msgstr "فجر"
+
+#: ../contents/ui/main.qml:34
+#, kde-format
+msgid "Sunrise"
+msgstr "طلوعِ آفتاب"
+
+#: ../contents/ui/main.qml:35
+#, kde-format
+msgid "Dhuhr"
+msgstr "ظہر"
+
+#: ../contents/ui/main.qml:36
+#, kde-format
+msgid "Asr"
+msgstr "عصر"
+
+#: ../contents/ui/main.qml:37
+#, kde-format
+msgid "Maghrib"
+msgstr "مغرب"
+
+#: ../contents/ui/main.qml:38
+#, kde-format
+msgid "Isha"
+msgstr "عشاء"
+
+#: ../contents/ui/main.qml:235
+#, kde-format
+msgid "Next Prayer"
+msgstr "اگلی نماز"
+
+#: ../contents/ui/main.qml:269
+#, kde-format
+msgid "remaining"
+msgstr "باقی"
+
+#: ../contents/ui/main.qml:358
+#, kde-format
+msgid "Location: "
+msgstr "مقام: "
+
+#: ../contents/ui/Old_configGeneral.qml:134
+#, kde-format
+msgid ""
+"💡 Tip: Open Google Maps, right-click on your location, and copy the "
+"numbers. Use a dot (.) for decimals."
+msgstr ""
+"💡 مشورہ: گوگل میپس کھولیں، اپنے مقام پر رائٹ کلک کریں اور اعداد کاپی کریں۔ "
+"اشاریہ کے لیے نقطہ (.) استعمال کریں۔"
+
+#: ../contents/ui/Old_configGeneral.qml:179
+#, kde-format
+msgid "🇴🇲 Oman (Official Calendar)"
+msgstr "🇴🇲 عمان (سرکاری تقویم)"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "PM"
+msgstr "PM"
+
+#: ../contents/code/praytime.js:365
+#, kde-format
+msgid "AM"
+msgstr "AM"
