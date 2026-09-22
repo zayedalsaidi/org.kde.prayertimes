@@ -1,11 +1,16 @@
 #!/bin/bash
 
 APP_ID="org.kde.prayertimes"
-VERSION="1.0.0"
+VERSION="1.0.1"
 
 echo "========================================="
 echo "Prayer Times Plasmoid - Build & Install"
 echo "========================================="
+
+# Function to check if the plasmoid is already installed
+is_installed() {
+    kpackagetool6 --type=Plasma/Applet --list 2>/dev/null | grep -q "$APP_ID"
+}
 
 # Function to build translations
 build_translations() {
@@ -15,8 +20,6 @@ build_translations() {
     # Find all .po files in po/ directory or subdirectories
     find po/ -name "*.po" 2>/dev/null | while read -r po_file; do
         # Extract language code from file path or name
-        # Example: po/ar/plasma_applet_org.kde.prayertimes.po -> ar
-        # or: po/ar.po -> ar
         lang=$(basename "$po_file" .po)
         lang=${lang#plasma_applet_${APP_ID}_}
         
@@ -32,8 +35,8 @@ build_translations() {
         
         echo "   - Compiling translation: $lang ($po_file)"
         
-        # Create target directory for this language
-        target_dir="locale/${lang}/LC_MESSAGES"
+        # Create target directory for this language inside contents/locale/
+        target_dir="contents/locale/${lang}/LC_MESSAGES"
         mkdir -p "$target_dir"
         
         # Compile .po to .mo
@@ -57,7 +60,6 @@ create_package() {
     
     if zip -r "$PACKAGE_NAME" \
         contents/ \
-        locale/ \
         metadata.json \
         LICENSE \
         README.md \
@@ -69,10 +71,10 @@ create_package() {
     fi
 }
 
-# Function to install the plasmoid
+# Function to install the plasmoid (Fresh Install)
 install_plasmoid() {
     echo ""
-    echo "3. Installing plasmoid..."
+    echo "3. Installing plasmoid (Fresh Install)..."
     
     PACKAGE_NAME="${APP_ID}-v${VERSION}.plasmoid"
     
@@ -103,32 +105,67 @@ install_plasmoid() {
     fi
 }
 
-# Function to install translations only
+# Function to upgrade the plasmoid
+upgrade_plasmoid() {
+    echo ""
+    echo "3. Upgrading plasmoid..."
+    
+    PACKAGE_NAME="${APP_ID}-v${VERSION}.plasmoid"
+    
+    if [[ ! -f "$PACKAGE_NAME" ]]; then
+        echo "   ✗ Package not found: $PACKAGE_NAME"
+        echo "   Please run build step first."
+        return 1
+    fi
+    
+    # Upgrade using kpackagetool6
+    if kpackagetool6 --type=Plasma/Applet --upgrade "$PACKAGE_NAME" 2>/dev/null; then
+        echo "   ✓ Plasmoid upgraded successfully"
+    else
+        echo "   ✗ Upgrade failed"
+        return 1
+    fi
+}
+
+# Function to install translations into the plasmoid's own directory
 install_translations() {
     echo ""
     echo "4. Installing translations..."
     
-    LOCALE_DIR="$HOME/.local/share/locale"
-    mkdir -p "$LOCALE_DIR"
+    # Target directory inside the installed plasmoid
+    TARGET_DIR="$HOME/.local/share/plasma/plasmoids/${APP_ID}/contents/locale"
+    mkdir -p "$TARGET_DIR"
     
-    # Copy compiled translations
-    if [[ -d "locale" ]]; then
-        cp -r locale/* "$LOCALE_DIR/" 2>/dev/null
-        echo "   ✓ Translations installed to: $LOCALE_DIR"
+    # Copy compiled translations from the local build directory
+    if [[ -d "contents/locale" ]]; then
+        cp -r contents/locale/* "$TARGET_DIR/" 2>/dev/null
+        echo "   ✓ Translations installed to: $TARGET_DIR"
     else
-        echo "   ⚠ No translations found (locale/ directory missing)"
+        echo "   ⚠ No translations found (contents/locale/ directory missing)"
     fi
 }
 
-# Function to rebuild Plasma cache
+# Function to rebuild Plasma cache and restart Plasma
 rebuild_cache() {
     echo ""
-    echo "5. Rebuilding Plasma cache..."
+    echo "5. Rebuilding Plasma cache and restarting Plasma..."
     
     if kbuildsycoca6 --noincremental 2>/dev/null; then
         echo "   ✓ Cache rebuilt successfully"
     else
-        echo "   ⚠ Cache rebuild failed (you may need to restart Plasma manually)"
+        echo "   ⚠ Cache rebuild failed"
+    fi
+    
+    echo "   Restarting Plasma shell..."
+    if kquitapp6 plasmashell 2>/dev/null; then
+        sleep 2 # Give it a moment to fully quit
+        if kstart plasmashell 2>/dev/null; then
+            echo "   ✓ Plasma restarted successfully"
+        else
+            echo "   ⚠ Failed to start Plasma. You may need to log out and log back in."
+        fi
+    else
+        echo "   ⚠ Failed to quit Plasma. You may need to restart it manually."
     fi
 }
 
@@ -137,18 +174,21 @@ show_usage() {
     echo "Usage: $0 [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  --build-only        Only build translations and package (no install)"
-    echo "  --install-only      Only install existing package and translations"
+    echo "  --build-only        Only build translations and package (no install/upgrade)"
+    echo "  --install-only      Only install existing package (fresh install)"
+    echo "  --upgrade           Only upgrade existing installed package"
     echo "  --translations-only Only build and install translations"
-    echo "  --no-restart        Don't rebuild Plasma cache after installation"
+    echo "  --no-restart        Don't rebuild Plasma cache and restart after installation"
     echo "  --help              Show this help message"
     echo ""
-    echo "Default behavior: Build translations, create package, install, and restart Plasma"
+    echo "Default behavior: Build translations, create package, check if installed,"
+    echo "                  then upgrade (if installed) or install (if not), and restart Plasma."
 }
 
 # Parse command line arguments
 BUILD_ONLY=false
 INSTALL_ONLY=false
+UPGRADE_ONLY=false
 TRANSLATIONS_ONLY=false
 NO_RESTART=false
 
@@ -160,6 +200,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --install-only)
             INSTALL_ONLY=true
+            shift
+            ;;
+        --upgrade)
+            UPGRADE_ONLY=true
             shift
             ;;
         --translations-only)
@@ -186,29 +230,43 @@ done
 echo ""
 
 if [[ "$INSTALL_ONLY" == true ]]; then
-    # Only install existing package
     install_plasmoid
     install_translations
     if [[ "$NO_RESTART" == false ]]; then
         rebuild_cache
     fi
+elif [[ "$UPGRADE_ONLY" == true ]]; then
+    upgrade_plasmoid
+    install_translations
+    if [[ "$NO_RESTART" == false ]]; then
+        rebuild_cache
+    fi
 elif [[ "$TRANSLATIONS_ONLY" == true ]]; then
-    # Only build and install translations
     build_translations
     install_translations
     if [[ "$NO_RESTART" == false ]]; then
         rebuild_cache
     fi
 elif [[ "$BUILD_ONLY" == true ]]; then
-    # Only build, don't install
     build_translations
     create_package
 else
-    # Full build and install (default)
+    # Default behavior: Build, then check if installed to decide between upgrade or fresh install
     build_translations
     create_package
-    install_plasmoid
+    
+    if is_installed; then
+        echo ""
+        echo "   ℹ️  Plasmoid is already installed. Performing upgrade..."
+        upgrade_plasmoid
+    else
+        echo ""
+        echo "   ℹ️  Plasmoid is not installed. Performing fresh installation..."
+        install_plasmoid
+    fi
+    
     install_translations
+    
     if [[ "$NO_RESTART" == false ]]; then
         rebuild_cache
     fi
@@ -221,8 +279,8 @@ echo "========================================="
 
 if [[ "$BUILD_ONLY" == false ]] && [[ "$NO_RESTART" == false ]]; then
     echo ""
-    echo "ℹ️  Plasma will restart automatically."
-    echo "   If it doesn't, please log out and log back in."
+    echo "ℹ️  Plasma has been restarted."
+    echo "   If the widget does not appear, please log out and log back in."
 fi
 
 if [[ "$BUILD_ONLY" == true ]]; then
@@ -230,6 +288,8 @@ if [[ "$BUILD_ONLY" == true ]]; then
     echo "📦 Package created: ${APP_ID}-v${VERSION}.plasmoid"
     echo "   To install manually, run:"
     echo "   kpackagetool6 --type=Plasma/Applet --install ${APP_ID}-v${VERSION}.plasmoid"
+    echo "   To upgrade manually, run:"
+    echo "   kpackagetool6 --type=Plasma/Applet --upgrade ${APP_ID}-v${VERSION}.plasmoid"
 fi
 
 echo ""

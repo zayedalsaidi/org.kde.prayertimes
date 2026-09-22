@@ -27,7 +27,7 @@ A native KDE Plasma 6 desktop widget that displays Islamic prayer times. It work
 
 ## 📸 Screenshots
 
-![Prayer Times](contents/preview/preview.png)
+![Prayer Times](contents/preview.png)
 
 
 ## 📦 Installation
@@ -49,8 +49,8 @@ The easiest way to build, package, and install the plasmoid along with all trans
    ```
    This script will automatically:
    - Compile all translation files (`.po` → `.mo`).
-   - Package the plasmoid into `org.kde.prayertimes-v1.0.0.plasmoid`.
-   - Install the package and translations to your local system.
+   - Package the plasmoid into `org.kde.prayertimes-v1.0.1.plasmoid`.
+   - Install/upgarde the package and translations to your local system.
    - Rebuild the Plasma cache and restart `plasmashell`.
 
 ### Method 2: Using `kpackagetool6` (Manual)
@@ -71,7 +71,7 @@ If you prefer not to use the build script, you can install the plasmoid manually
 3. Rebuild the system cache and restart `plasmashell`:
    ```bash
    kbuildsycoca6 --noincremental
-   plasmashell --replace &
+   kquitapp6 plasmashell && kstart plasmashell
    ```
 
 ### ️ Upgrading the Plasmoid
@@ -93,7 +93,7 @@ To upgrade to the latest version:
    ```bash
    kpackagetool6 --type=Plasma/Applet --upgrade .
    kbuildsycoca6 --noincremental
-   plasmashell --replace &
+   kquitapp6 plasmashell && kstart plasmashell
    ```
 
 ## 📂 Project Structure

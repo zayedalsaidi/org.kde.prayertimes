@@ -4,7 +4,7 @@
         "Name[ar]": "مواقيت الصلاة",
         "Description": "Offline Islamic Prayer Times Applet with manual location coordinates and system positioning",
         "Description[ar]": "بريمج مواقيت الصلاة الإسلامية يعمل دون إنترنت مع دعم التحديد الآلي للموقع أو الإدخال اليدوي للإحداثيات",
-        "Icon": "environment-symbolic",
+        "Icon": "preferences-system-time",
         "Id": "org.kde.prayertimes",
         "License": "GPL-3.0-or-later",
         "Authors": [
