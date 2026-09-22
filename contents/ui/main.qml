@@ -156,9 +156,13 @@ function updateTimes() {
 
     compactRepresentation: Item {
         id: compactRoot
+        property bool isHovered: false
 
         MouseArea {
             anchors.fill: parent
+            hoverEnabled: true  // Enable hover tracking
+            onEntered: compactRoot.isHovered = true
+            onExited: compactRoot.isHovered = false
             onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
 
@@ -166,27 +170,18 @@ function updateTimes() {
             anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
 
-            Kirigami.Icon {
-                source: "environment-symbolic"
-                Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                Layout.preferredHeight: Kirigami.Units.iconSizes.small
+            // استخدام إيموجي المسجد بدلاً من الأيقونة الرمزية
+            Text {
+                text: "🕌"
+                font.pixelSize: Kirigami.Units.iconSizes.small
+                verticalAlignment: Text.AlignVCenter
+                Layout.alignment: Qt.AlignVCenter
             }
 
-            ColumnLayout {
-                spacing: 0
-                visible: compactRoot.height > Kirigami.Units.gridUnit * 1.5
-
-                PlasmaComponents.Label {
-                    text: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")
-                    font.bold: true
-                    font.pixelSize: Kirigami.Units.gridUnit * 0.7
-                }
-
-                PlasmaComponents.Label {
-                    text: root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
-                    font.pixelSize: Kirigami.Units.gridUnit * 0.6
-                    opacity: 0.8
-                }
+            PlasmaComponents.ToolTip {
+                visible: compactRoot.isHovered
+                text: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--") + "\n" + 
+                      i18n("remaining") + ": " + root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
             }
         }
     }
