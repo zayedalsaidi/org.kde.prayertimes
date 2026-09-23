@@ -44,18 +44,6 @@ PlasmoidItem {
             default:        return key || "";
         }
     }
-    
-    // function getPrayerIcon(prayerName) {
-    //     switch (prayerName) {
-    //         case "fajr":    return "weather-clear-night";
-    //         case "sunrise": return "weather-clear";
-    //         case "dhuhr":   return "weather-sunny";
-    //         case "asr":     return "weather-few-clouds";
-    //         case "maghrib": return "weather-storm";
-    //         case "isha":    return "weather-clear-night";
-    //         default:        return "clock";
-    //     }
-    // }
 
     function formatCountdown(seconds) {
         if (!seconds || seconds <= 0) return "00:00";
@@ -64,16 +52,8 @@ PlasmoidItem {
         return (h < 10 ? "0" + h : h) + ":" + 
                (m < 10 ? "0" + m : m);
     }
-    
-    function formatCountdownShort(seconds) {
-        if (!seconds || seconds <= 0) return "00:00";
-        var h = Math.floor(seconds / 3600);
-        var m = Math.floor((seconds % 3600) / 60);
-        return (h < 10 ? "0" + h : h) + ":" + 
-               (m < 10 ? "0" + m : m);
-    }
 
-function updateTimes() {
+    function updateTimes() {
         var now = new Date();
         
         if (Plasmoid.configuration && Plasmoid.configuration.useAutoLocation && posSource.position.coordinate.isValid) {
@@ -84,8 +64,6 @@ function updateTimes() {
             root.activeLng = getValidCoord(Plasmoid.configuration ? Plasmoid.configuration.longitude : null, 58.3829);
         }
 
-        // حساب الفارق الزمني بالدقائق أو الساعات لمسقط (UTC+4)
-        // System timezone offset in hours
         var timeZoneOffset = -now.getTimezoneOffset() / 60.0;
 
         var config = {
@@ -121,6 +99,7 @@ function updateTimes() {
         }
     }
 
+    // ✅ FIXED TIMER: Reassign the object to trigger QML property change notifications
     Timer {
         id: mainTimer
         interval: 1000
@@ -128,13 +107,17 @@ function updateTimes() {
         repeat: true
         onTriggered: {
             if (root.nextPrayerInfo && root.nextPrayerInfo.remainingSeconds > 0) {
-                root.nextPrayerInfo.remainingSeconds--;
+                // Reassigning the entire object forces QML to emit the `nextPrayerInfoChanged` signal
+                root.nextPrayerInfo = {
+                    name: root.nextPrayerInfo.name,
+                    time: root.nextPrayerInfo.time,
+                    remainingSeconds: root.nextPrayerInfo.remainingSeconds - 1
+                };
             } else {
                 root.updateTimes();
             }
         }
     }
-
 
     // الربط مع تغييرات الإعدادات
     Connections {
@@ -160,7 +143,7 @@ function updateTimes() {
 
         MouseArea {
             anchors.fill: parent
-            hoverEnabled: true  // Enable hover tracking
+            hoverEnabled: true
             onEntered: compactRoot.isHovered = true
             onExited: compactRoot.isHovered = false
             onClicked: Plasmoid.expanded = !Plasmoid.expanded
@@ -170,7 +153,6 @@ function updateTimes() {
             anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
 
-            // استخدام إيموجي المسجد بدلاً من الأيقونة الرمزية
             Text {
                 text: "🕌"
                 font.pixelSize: Kirigami.Units.iconSizes.small
@@ -197,9 +179,6 @@ function updateTimes() {
             anchors.margins: Kirigami.Units.largeSpacing
             spacing: Kirigami.Units.mediumSpacing
 
-            // ═══════════════════════════════════════════════════
-            // 1. البطاقة العلوية: الصلاة القادمة (التصميم الأول)
-            // ═══════════════════════════════════════════════════
             Kirigami.AbstractCard {
                 Layout.fillWidth: true
                 Layout.preferredHeight: Kirigami.Units.gridUnit * 7
@@ -218,7 +197,6 @@ function updateTimes() {
                     anchors.margins: Kirigami.Units.largeSpacing
                     spacing: Kirigami.Units.largeSpacing
 
-                    // البطاقة اليسرى: اسم الصلاة
                     ColumnLayout {
                         Layout.fillHeight: true
                         Layout.preferredWidth: parent.width * 0.4
@@ -240,7 +218,6 @@ function updateTimes() {
                         }
                     }
 
-                    // فاصل عمودي
                     Rectangle {
                         Layout.fillHeight: true
                         Layout.preferredWidth: 1
@@ -248,7 +225,6 @@ function updateTimes() {
                         opacity: 0.3
                     }
 
-                    // البطاقة اليمنى: الوقت المتبقي
                     ColumnLayout {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
@@ -278,18 +254,11 @@ function updateTimes() {
                 }
             }
 
-            // ═══════════════════════════════════════════════════
-            // 2. فاصل
-            // ═══════════════════════════════════════════════════
             Kirigami.Separator { Layout.fillWidth: true }
 
-            // ═══════════════════════════════════════════════════
-            // 3. قائمة الصلوات تحت البطاقة
-            // ═══════════════════════════════════════════════════
             ScrollView {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                // ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
                 ColumnLayout {
                     width: parent.width
@@ -316,7 +285,6 @@ function updateTimes() {
                                 anchors.rightMargin: Kirigami.Units.largeSpacing
                                 spacing: Kirigami.Units.mediumSpacing
 
-                                // عمود اسم الصلاة مع الرمز التعبيري (عرض ثابت)
                                 PlasmaComponents.Label {
                                     text: root.getPrayerName(modelData)
                                     font.bold: modelData === root.nextPrayerInfo.name
@@ -329,10 +297,8 @@ function updateTimes() {
                                     verticalAlignment: Text.AlignVCenter
                                 }
 
-                                // فاصل مرن
                                 Item { Layout.fillWidth: true }
 
-                                // عمود الوقت (عرض ثابت)
                                 PlasmaComponents.Label {
                                     text: (root.prayerTimes && root.prayerTimes[modelData]) ? root.prayerTimes[modelData] : "--:--"
                                     font.bold: modelData === root.nextPrayerInfo.name
@@ -351,9 +317,6 @@ function updateTimes() {
                 }
             }
 
-            // ═══════════════════════════════════════════════════
-            // 4. معلومات الموقع
-            // ═══════════════════════════════════════════════════
             PlasmaComponents.Label {
                 text: i18n("Location: ") + root.activeLat.toFixed(3) + ", " + root.activeLng.toFixed(3)
                 font.pixelSize: Kirigami.Units.gridUnit * 0.65

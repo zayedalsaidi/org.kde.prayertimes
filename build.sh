@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_ID="org.kde.prayertimes"
-VERSION="1.0.1"
+VERSION="1.0.2"
 
 echo "========================================="
 echo "Prayer Times Plasmoid - Build & Install"
