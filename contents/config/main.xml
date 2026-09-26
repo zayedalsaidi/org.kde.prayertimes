@@ -17,6 +17,9 @@
         <entry name="timeFormat" type="String">
             <default>12h</default>
         </entry>
+        <entry name="countdownFormat" type="String">
+            <default>3</default>
+        </entry>
         <entry name="calcMethod" type="String">
             <default>Oman</default>
         </entry>

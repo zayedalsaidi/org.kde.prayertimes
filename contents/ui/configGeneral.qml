@@ -25,6 +25,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_latitude: latitudeField.text
     property alias cfg_longitude: longitudeField.text
     property alias cfg_timeFormat: timeFormatCombo.currentValue
+    property alias cfg_countdownFormat: countdownFormatCombo.currentValue
     property alias cfg_calcMethod: calcMethodCombo.currentValue
     property alias cfg_asrMethod: asrMethodCombo.currentIndex
     property alias cfg_highLatsMethod: highLatsCombo.currentValue
@@ -41,6 +42,7 @@ KCMUtils.SimpleKCM {
     property string cfg_latitudeDefault: "23.5880"
     property string cfg_longitudeDefault: "58.3829"
     property string cfg_timeFormatDefault: "12h"
+    property string cfg_countdownFormatDefault: "3"
     property string cfg_calcMethodDefault: "Oman"
     property int cfg_asrMethodDefault: 0
     property string cfg_highLatsMethodDefault: "NightMiddle"
@@ -107,6 +109,16 @@ KCMUtils.SimpleKCM {
                             { text: i18n("24-hour (e.g., 14:30)"), value: "24h" },
                             { text: i18n("12-hour with AM/PM (e.g., 02:30 PM)"), value: "12h" },
                             { text: i18n("12-hour without AM/PM (e.g., 02:30)"), value: "12H" }
+                        ]
+                    }
+                    ComboBox {
+                        id: countdownFormatCombo
+                        Kirigami.FormData.label: i18n("Countdown Format:")
+                        textRole: "text"; valueRole: "value"
+                        model: [
+                            { text: i18n("Remaining: 01:15"), value: "1" },
+                            { text: i18n("1 hour and 15 minutes remaining"), value: "2" },
+                            { text: i18n("In 1 hr and 15 mins"), value: "3" }
                         ]
                     }
                 }
