@@ -23,6 +23,10 @@ PlasmoidItem {
     property var prayerTimes: ({})
     property var nextPrayerInfo: ({ name: "fajr", time: "--:--", remainingSeconds: 0 })
 
+    // ✅ Native Plasma 6 Tooltips: Prevents overlap and lets the shell handle positioning automatically
+    toolTipMainText: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")
+    toolTipSubText: i18n("remaining") + ": " + root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
+
     // دالة مساعدة لضمان قراءة الإحداثيات كأرقام صحيحة
     function getValidCoord(val, defaultVal) {
         if (val === undefined || val === null || val === "") return defaultVal;
@@ -138,14 +142,8 @@ PlasmoidItem {
     }
 
     compactRepresentation: Item {
-        id: compactRoot
-        property bool isHovered: false
-
         MouseArea {
             anchors.fill: parent
-            hoverEnabled: true
-            onEntered: compactRoot.isHovered = true
-            onExited: compactRoot.isHovered = false
             onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
 
@@ -158,12 +156,6 @@ PlasmoidItem {
                 font.pixelSize: Kirigami.Units.iconSizes.small
                 verticalAlignment: Text.AlignVCenter
                 Layout.alignment: Qt.AlignVCenter
-            }
-
-            PlasmaComponents.ToolTip {
-                visible: compactRoot.isHovered
-                text: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--") + "\n" + 
-                      i18n("remaining") + ": " + root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
             }
         }
     }
