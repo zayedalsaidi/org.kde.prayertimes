@@ -25,7 +25,6 @@ PlasmoidItem {
 
     // ✅ Native Plasma 6 Tooltips: Prevents overlap and lets the shell handle positioning automatically
     toolTipMainText: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")
-    // toolTipSubText: i18n("remaining") + ": " + root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
     toolTipSubText: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)
 
 
