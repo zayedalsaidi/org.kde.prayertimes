@@ -117,8 +117,8 @@ KCMUtils.SimpleKCM {
                         textRole: "text"; valueRole: "value"
                         model: [
                             { text: i18n("Remaining: 01:15"), value: "1" },
-                            { text: i18n("1 hour and 15 minutes remaining"), value: "2" },
-                            { text: i18n("In 1 hr and 15 mins"), value: "3" }
+                            { text: i18n("1 hr 15 mins remaining"), value: "2" },
+                            { text: i18n("In 1 hr 15 mins"), value: "3" }
                         ]
                     }
                 }
