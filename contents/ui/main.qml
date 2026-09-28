@@ -76,14 +76,14 @@ PlasmoidItem {
             if (fmt === "2") {
                 // "Remaining: X hour and X minutes" or "Remaining: X minutes"
                 if (h > 0) {
-                    return i18n("%1 hour and %2 minutes remaining", h, m);
+                    return i18n("%1 hr %2 mins remaining", h, m);
                 } else {
-                    return i18n("%1 minutes remaining", m);
+                    return i18n("%1 mins remaining", m);
                 }
             } else if (fmt === "3") {
                 // "In X hour and X minutes" or "In X minutes"
                 if (h > 0) {
-                    return i18n("In %1 hr and %2 mins", h, m);
+                    return i18n("In %1 hr %2 mins", h, m);
                 } else {
                     return i18n("In %1 mins", m);
                 }
