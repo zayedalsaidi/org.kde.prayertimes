@@ -42,7 +42,7 @@ KCMUtils.SimpleKCM {
     property string cfg_latitudeDefault: "23.5880"
     property string cfg_longitudeDefault: "58.3829"
     property string cfg_timeFormatDefault: "12h"
-    property string cfg_countdownFormatDefault: "3"
+    property string cfg_countdownFormatDefault: "2"
     property string cfg_calcMethodDefault: "Oman"
     property int cfg_asrMethodDefault: 0
     property string cfg_highLatsMethodDefault: "NightMiddle"
