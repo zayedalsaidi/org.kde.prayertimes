@@ -116,9 +116,8 @@ KCMUtils.SimpleKCM {
                         Kirigami.FormData.label: i18n("Countdown Format:")
                         textRole: "text"; valueRole: "value"
                         model: [
-                            { text: i18n("Remaining: 01:15"), value: "1" },
-                            { text: i18n("1 hr 15 mins remaining"), value: "2" },
-                            { text: i18n("In 1 hr 15 mins"), value: "3" }
+                            { text: i18n("HH:MM"), value: "1" },
+                            { text: i18n("HH hr MM min"), value: "2" }
                         ]
                     }
                 }
@@ -197,7 +196,7 @@ KCMUtils.SimpleKCM {
                     Kirigami.Heading { level: 2; text: i18n("Prayer Times Plasmoid") }
                     Label { text: i18n("Developer: Zayed Al-Saidi") }
                     Label { text: i18n("License: GPL-3.0-or-later") }
-                    Label { text: i18n("Version: 1.0.0") }
+                    Label { text: i18n("Version: 1.0.3") }
 
                     Kirigami.Separator { Layout.fillWidth: true }
 

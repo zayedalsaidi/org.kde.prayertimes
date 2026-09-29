@@ -23,9 +23,9 @@ PlasmoidItem {
     property var prayerTimes: ({})
     property var nextPrayerInfo: ({ name: "fajr", time: "--:--", remainingSeconds: 0 })
 
-    // ✅ Native Plasma 6 Tooltips: Prevents overlap and lets the shell handle positioning automatically
-    toolTipMainText: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")
-    toolTipSubText: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)
+    // ✅ Native Plasma 6 Tooltips
+    toolTipMainText: root.nextPrayerInfo ? (root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")) : ""
+        toolTipSubText: root.nextPrayerInfo ? i18n("Remaining: %1", root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)) : i18n("Remaining: --:--")
 
 
     // دالة مساعدة لضمان قراءة الإحداثيات كأرقام صحيحة
@@ -58,38 +58,39 @@ PlasmoidItem {
                (m < 10 ? "0" + m : m);
     }
 
-    function getFormattedCountdown(seconds, simple) {
+    function getFormattedCountdown(seconds) {
         var fmt = (Plasmoid.configuration && Plasmoid.configuration.countdownFormat) ? Plasmoid.configuration.countdownFormat : "1";
-        if (!seconds || seconds <= 0) seconds = 0;
-        if (!simple) simple = "0";
+        
+        if (!seconds || seconds <= 0) {
+            seconds = 0;
+        }
+        
         var totalMins = Math.floor(seconds / 60);
         var h = Math.floor(totalMins / 60);
         var m = totalMins % 60;
 
-        if (simple === "1") {
-            if (h > 0) {
-                return i18n("%1 hr %2 mins", h, m);
-            } else {
-                return i18n("%1 mins", m);
-            }
+        if (fmt === "1") {
+            // Option 1: Digital format "HH:MM" (No pluralization needed)
+            var hStr = h < 10 ? "0" + h : h;
+            var mStr = m < 10 ? "0" + m : m;
+            return hStr + ":" + mStr;
         } else {
-            if (fmt === "2") {
-                // "Remaining: X hour and X minutes" or "Remaining: X minutes"
-                if (h > 0) {
-                    return i18n("%1 hr %2 mins remaining", h, m);
+            // Option 2: Verbose format with proper pluralization
+            if (h > 0) {
+                // Pluralize hours
+                var hourStr = i18np("%1 hr", "%1 hrs", h);
+                
+                // If there are minutes, pluralize them and join with "and"
+                if (m > 0) {
+                    var minStr = i18np("%1 min", "%1 mins", m);
+                    return i18n("%1 and %2", hourStr, minStr);
                 } else {
-                    return i18n("%1 mins remaining", m);
-                }
-            } else if (fmt === "3") {
-                // "In X hour and X minutes" or "In X minutes"
-                if (h > 0) {
-                    return i18n("In %1 hr %2 mins", h, m);
-                } else {
-                    return i18n("In %1 mins", m);
+                    // Edge case: Exactly X hours, 0 minutes (e.g., "2 hrs")
+                    return hourStr;
                 }
             } else {
-                // Option 1: Digital format "Remaining: 00:00" or "Remaining: 01:15"
-                return i18n("Remaining: %1", root.formatCountdown(seconds));
+                // Edge case: Less than 1 hour (e.g., "45 mins")
+                return i18np("%1 min", "%1 mins", m);
             }
         }
     }

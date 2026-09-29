@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.prayertimes 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-21 20:49+0400\n"
-"PO-Revision-Date: 2026-09-21 21:20+0400\n"
+"POT-Creation-Date: 2026-09-29 18:49+0400\n"
+"PO-Revision-Date: 2026-09-29 19:00+0400\n"
 "Last-Translator: Developer Name <developer@example.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,291 +16,269 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../contents/ui/configGeneral.qml:53 ../contents/ui/Old_configGeneral.qml:62
+#: ../contents/ui/configGeneral.qml:65
 #, kde-format
 msgid "Location"
 msgstr "Местоположение"
 
-#: ../contents/ui/configGeneral.qml:54 ../contents/ui/Old_configGeneral.qml:63
+#: ../contents/ui/configGeneral.qml:66
 #, kde-format
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: ../contents/ui/configGeneral.qml:55 ../contents/ui/Old_configGeneral.qml:64
+#: ../contents/ui/configGeneral.qml:67
 #, kde-format
 msgid "Calculation"
 msgstr "Расчёт"
 
-#: ../contents/ui/configGeneral.qml:56 ../contents/ui/Old_configGeneral.qml:65
+#: ../contents/ui/configGeneral.qml:68
 #, kde-format
 msgid "About"
 msgstr "О программе"
 
-#: ../contents/ui/configGeneral.qml:70 ../contents/ui/Old_configGeneral.qml:115
+#: ../contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "Location Source:"
 msgstr "Источник местоположения:"
 
-#: ../contents/ui/configGeneral.qml:70 ../contents/ui/Old_configGeneral.qml:116
+#: ../contents/ui/configGeneral.qml:87
 #, kde-format
 msgid "Use system location services (Recommended)"
 msgstr "Использовать системные службы геолокации (Рекомендуется)"
 
-#: ../contents/ui/configGeneral.qml:71 ../contents/ui/Old_configGeneral.qml:120
+#: ../contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "Latitude:"
 msgstr "Широта:"
 
-#: ../contents/ui/configGeneral.qml:72 ../contents/ui/Old_configGeneral.qml:126
+#: ../contents/ui/configGeneral.qml:89
 #, kde-format
 msgid "Longitude:"
 msgstr "Долгота:"
 
-#: ../contents/ui/configGeneral.qml:73
+#: ../contents/ui/configGeneral.qml:90
 #, kde-format
 msgid ""
 "💡 Tip: Open Google Maps, right-click on your location, and copy the numbers."
 msgstr ""
 "💡 Совет: Откройте Google Карты, нажмите правой кнопкой мыши на ваше местоположение и скопируйте координаты."
 
-#: ../contents/ui/configGeneral.qml:84 ../contents/ui/Old_configGeneral.qml:151
+#: ../contents/ui/configGeneral.qml:106
 #, kde-format
 msgid "Time Format:"
 msgstr "Формат времени:"
 
-#: ../contents/ui/configGeneral.qml:87 ../contents/ui/Old_configGeneral.qml:155
+#: ../contents/ui/configGeneral.qml:109
 #, kde-format
 msgid "24-hour (e.g., 14:30)"
 msgstr "24-часовой (напр., 14:30)"
 
-#: ../contents/ui/configGeneral.qml:88 ../contents/ui/Old_configGeneral.qml:156
+#: ../contents/ui/configGeneral.qml:110
 #, kde-format
 msgid "12-hour with AM/PM (e.g., 02:30 PM)"
 msgstr "12-часовой с AM/PM (напр., 02:30 PM)"
 
-#: ../contents/ui/configGeneral.qml:89 ../contents/ui/Old_configGeneral.qml:157
+#: ../contents/ui/configGeneral.qml:111
 #, kde-format
 msgid "12-hour without AM/PM (e.g., 02:30)"
 msgstr "12-часовой без AM/PM (напр., 02:30)"
 
-#: ../contents/ui/configGeneral.qml:102
-#: ../contents/ui/Old_configGeneral.qml:175
+#: ../contents/ui/configGeneral.qml:116
+#, kde-format
+msgid "Countdown Format:"
+msgstr "Формат обратного отсчёта:"
+
+#: ../contents/ui/configGeneral.qml:119
+#, kde-format
+msgid "HH:MM"
+msgstr "ЧЧ:ММ"
+
+#: ../contents/ui/configGeneral.qml:120
+#, kde-format
+msgid "HH hr MM min"
+msgstr "ЧЧ ч ММ мин"
+
+#: ../contents/ui/configGeneral.qml:138
 #, kde-format
 msgid "Calculation Method:"
 msgstr "Метод расчёта:"
 
-#: ../contents/ui/configGeneral.qml:105
-#: ../contents/ui/Old_configGeneral.qml:179
+#: ../contents/ui/configGeneral.qml:141
 #, kde-format
-msgid "🇴🇲 Oman (Official Calendar)"
+msgid "🇴 Oman (Official Calendar)"
 msgstr "🇴🇲 Оман (Официальный календарь)"
 
-#: ../contents/ui/configGeneral.qml:106
-#: ../contents/ui/Old_configGeneral.qml:180
+#: ../contents/ui/configGeneral.qml:142
 #, kde-format
 msgid "Muslim World League"
 msgstr "Всемирная исламская лига"
 
-#: ../contents/ui/configGeneral.qml:107
-#: ../contents/ui/Old_configGeneral.qml:181
+#: ../contents/ui/configGeneral.qml:143
 #, kde-format
 msgid "ISNA (North America)"
 msgstr "ISNA (Северная Америка)"
 
-#: ../contents/ui/configGeneral.qml:108
-#: ../contents/ui/Old_configGeneral.qml:182
+#: ../contents/ui/configGeneral.qml:144
 #, kde-format
 msgid "Egyptian General Authority"
 msgstr "Египетское генеральное управление геодезии"
 
-#: ../contents/ui/configGeneral.qml:109
-#: ../contents/ui/Old_configGeneral.qml:183
+#: ../contents/ui/configGeneral.qml:145
 #, kde-format
 msgid "Umm Al-Qura (Makkah)"
 msgstr "Умм аль-Кура (Мекка)"
 
-#: ../contents/ui/configGeneral.qml:110
-#: ../contents/ui/Old_configGeneral.qml:184
+#: ../contents/ui/configGeneral.qml:146
 #, kde-format
 msgid "University of Islamic Sciences, Karachi"
 msgstr "Университет исламских наук, Карачи"
 
-#: ../contents/ui/configGeneral.qml:111
-#: ../contents/ui/Old_configGeneral.qml:185
+#: ../contents/ui/configGeneral.qml:147
 #, kde-format
 msgid "Institute of Geophysics, Tehran"
 msgstr "Институт геофизики, Тегеран"
 
-#: ../contents/ui/configGeneral.qml:112
-#: ../contents/ui/Old_configGeneral.qml:186
+#: ../contents/ui/configGeneral.qml:148
 #, kde-format
 msgid "Shia Ithna-Ashari (Jafari)"
 msgstr "Шииты-двунадесятники (Джафаритский мазхаб)"
 
-#: ../contents/ui/configGeneral.qml:113
-#: ../contents/ui/Old_configGeneral.qml:188
+#: ../contents/ui/configGeneral.qml:149
 #, kde-format
 msgid "France"
 msgstr "Франция"
 
-#: ../contents/ui/configGeneral.qml:114
-#: ../contents/ui/Old_configGeneral.qml:189
+#: ../contents/ui/configGeneral.qml:150
 #, kde-format
 msgid "Russia"
 msgstr "Россия"
 
-#: ../contents/ui/configGeneral.qml:115
-#: ../contents/ui/Old_configGeneral.qml:189
+#: ../contents/ui/configGeneral.qml:151
 #, kde-format
 msgid "Malaysia (JAKIM)"
 msgstr "Малайзия (JAKIM)"
 
-#: ../contents/ui/configGeneral.qml:116
-#: ../contents/ui/Old_configGeneral.qml:190
+#: ../contents/ui/configGeneral.qml:152
 #, kde-format
 msgid "Singapore"
 msgstr "Сингапур"
 
-#: ../contents/ui/configGeneral.qml:117
-#: ../contents/ui/Old_configGeneral.qml:191
+#: ../contents/ui/configGeneral.qml:153
 #, kde-format
 msgid "Custom Angles"
 msgstr "Пользовательские углы"
 
-#: ../contents/ui/configGeneral.qml:122
-#: ../contents/ui/Old_configGeneral.qml:196
+#: ../contents/ui/configGeneral.qml:158
 #, kde-format
 msgid "Asr Juristic Method:"
 msgstr "Правовой метод расчёта Аср:"
 
-#: ../contents/ui/configGeneral.qml:123
-#: ../contents/ui/Old_configGeneral.qml:198
+#: ../contents/ui/configGeneral.qml:159
 #, kde-format
 msgid "Standard (Shafi, Maliki, Hanbali)"
 msgstr "Стандартный (Шафиитский, Маликитский, Ханбалитский)"
 
-#: ../contents/ui/configGeneral.qml:123
-#: ../contents/ui/Old_configGeneral.qml:199
+#: ../contents/ui/configGeneral.qml:159
 #, kde-format
 msgid "Hanafi"
 msgstr "Ханафитский"
 
-#: ../contents/ui/configGeneral.qml:127
-#: ../contents/ui/Old_configGeneral.qml:204
+#: ../contents/ui/configGeneral.qml:163
 #, kde-format
 msgid "Higher Latitudes Method:"
 msgstr "Метод для высоких широт:"
 
-#: ../contents/ui/configGeneral.qml:130
-#: ../contents/ui/Old_configGeneral.qml:208
+#: ../contents/ui/configGeneral.qml:166
 #, kde-format
 msgid "Night Middle (Recommended)"
 msgstr "Середина ночи (Рекомендуется)"
 
-#: ../contents/ui/configGeneral.qml:131
-#: ../contents/ui/Old_configGeneral.qml:209
+#: ../contents/ui/configGeneral.qml:167
 #, kde-format
 msgid "One-Seventh of Night"
 msgstr "Одна седьмая ночи"
 
-#: ../contents/ui/configGeneral.qml:132
-#: ../contents/ui/Old_configGeneral.qml:210
+#: ../contents/ui/configGeneral.qml:168
 #, kde-format
 msgid "Angle-Based"
 msgstr "На основе угла"
 
-#: ../contents/ui/configGeneral.qml:133
-#: ../contents/ui/Old_configGeneral.qml:211
+#: ../contents/ui/configGeneral.qml:169
 #, kde-format
 msgid "None (No Adjustment)"
 msgstr "Нет (без корректировки)"
 
-#: ../contents/ui/configGeneral.qml:136
-#: ../contents/ui/Old_configGeneral.qml:217
+#: ../contents/ui/configGeneral.qml:172
 #, kde-format
 msgid "Manual Time Adjustments (Offsets)"
 msgstr "Ручная корректировка времени (смещения)"
 
-#: ../contents/ui/configGeneral.qml:137
-#: ../contents/ui/Old_configGeneral.qml:219
+#: ../contents/ui/configGeneral.qml:173
 #, kde-format
 msgid "Fajr Offset (min):"
 msgstr "Смещение Фаджр (мин):"
 
-#: ../contents/ui/configGeneral.qml:138
-#: ../contents/ui/Old_configGeneral.qml:220
+#: ../contents/ui/configGeneral.qml:174
 #, kde-format
 msgid "Dhuhr Offset (min):"
 msgstr "Смещение Зухр (мин):"
 
-#: ../contents/ui/configGeneral.qml:139
-#: ../contents/ui/Old_configGeneral.qml:221
+#: ../contents/ui/configGeneral.qml:175
 #, kde-format
 msgid "Asr Offset (min):"
 msgstr "Смещение Аср (мин):"
 
-#: ../contents/ui/configGeneral.qml:140
-#: ../contents/ui/Old_configGeneral.qml:222
+#: ../contents/ui/configGeneral.qml:176
 #, kde-format
 msgid "Maghrib Offset (min):"
 msgstr "Смещение Магриб (мин):"
 
-#: ../contents/ui/configGeneral.qml:141
-#: ../contents/ui/Old_configGeneral.qml:223
+#: ../contents/ui/configGeneral.qml:177
 #, kde-format
 msgid "Isha Offset (min):"
 msgstr "Смещение Иша (мин):"
 
-#: ../contents/ui/configGeneral.qml:142
-#: ../contents/ui/Old_configGeneral.qml:227
+#: ../contents/ui/configGeneral.qml:178
 #, kde-format
 msgid "Custom Calculation Angles"
 msgstr "Пользовательские углы расчёта"
 
-#: ../contents/ui/configGeneral.qml:143
-#: ../contents/ui/Old_configGeneral.qml:229
+#: ../contents/ui/configGeneral.qml:179
 #, kde-format
 msgid "Fajr Angle (x10):"
 msgstr "Угол Фаджр (x10):"
 
-#: ../contents/ui/configGeneral.qml:144
-#: ../contents/ui/Old_configGeneral.qml:230
+#: ../contents/ui/configGeneral.qml:180
 #, kde-format
 msgid "Isha Angle (x10):"
 msgstr "Угол Иша (x10):"
 
-#: ../contents/ui/configGeneral.qml:155
-#: ../contents/ui/Old_configGeneral.qml:245
+#: ../contents/ui/configGeneral.qml:196
 #, kde-format
 msgid "Prayer Times Plasmoid"
 msgstr "Плазмоид времени намаза"
 
-#: ../contents/ui/configGeneral.qml:156
-#: ../contents/ui/Old_configGeneral.qml:246
+#: ../contents/ui/configGeneral.qml:197
 #, kde-format
 msgid "Developer: Zayed Al-Saidi"
 msgstr "Разработчик: Заид Аль-Саиди"
 
-#: ../contents/ui/configGeneral.qml:157
-#: ../contents/ui/Old_configGeneral.qml:247
+#: ../contents/ui/configGeneral.qml:198
 #, kde-format
 msgid "License: GPL-3.0-or-later"
 msgstr "Лицензия: GPL-3.0-or-later"
 
-#: ../contents/ui/configGeneral.qml:158
-#: ../contents/ui/Old_configGeneral.qml:248
+#: ../contents/ui/configGeneral.qml:199
 #, kde-format
-msgid "Version: 1.0.0"
-msgstr "Версия: 1.0.0"
+msgid "Version: 1.0.3"
+msgstr "Версия: 1.0.3"
 
-#: ../contents/ui/configGeneral.qml:162
-#: ../contents/ui/Old_configGeneral.qml:252
+#: ../contents/ui/configGeneral.qml:203
 #, kde-format
 msgid "Powered by PrayTime.js"
 msgstr "Работает на базе PrayTime.js"
 
-#: ../contents/ui/configGeneral.qml:164
-#: ../contents/ui/Old_configGeneral.qml:254
+#: ../contents/ui/configGeneral.qml:205
 #, kde-format
 msgid ""
 "Note: PrayTime.js has been slightly modified to ensure full compatibility "
@@ -308,82 +286,103 @@ msgid ""
 msgstr ""
 "Примечание: PrayTime.js был немного изменён для обеспечения полной совместимости со средой Qt/QML."
 
-#: ../contents/ui/configGeneral.qml:169
-#: ../contents/ui/Old_configGeneral.qml:260
+#: ../contents/ui/configGeneral.qml:210
 #, kde-format
 msgid "Official Website"
 msgstr "Официальный сайт"
 
-#: ../contents/ui/configGeneral.qml:170
-#: ../contents/ui/Old_configGeneral.qml:265
+#: ../contents/ui/configGeneral.qml:211
 #, kde-format
 msgid "Calculation Documentation"
 msgstr "Документация по расчётам"
 
-#: ../contents/ui/configGeneral.qml:171
-#: ../contents/ui/Old_configGeneral.qml:270
+#: ../contents/ui/configGeneral.qml:212
 #, kde-format
 msgid "Source Code (GitHub)"
 msgstr "Исходный код (GitHub)"
 
-#: ../contents/ui/configGeneral.qml:172
-#: ../contents/ui/Old_configGeneral.qml:274
+#: ../contents/ui/configGeneral.qml:213
 #, kde-format
 msgid "PrayTime.js License: MIT License"
 msgstr "Лицензия PrayTime.js: Лицензия MIT"
 
-#: ../contents/ui/main.qml:33
+#: ../contents/ui/main.qml:28
+#, kde-format
+msgid "Remaining: %1"
+msgstr "Осталось: %1"
+
+#: ../contents/ui/main.qml:28
+#, kde-format
+msgid "Remaining: --:--"
+msgstr "Осталось: --:--"
+
+#: ../contents/ui/main.qml:43
 #, kde-format
 msgid "Fajr"
 msgstr "Фаджр"
 
-#: ../contents/ui/main.qml:34
+#: ../contents/ui/main.qml:44
 #, kde-format
 msgid "Sunrise"
 msgstr "Восход солнца"
 
-#: ../contents/ui/main.qml:35
+#: ../contents/ui/main.qml:45
 #, kde-format
 msgid "Dhuhr"
 msgstr "Зухр"
 
-#: ../contents/ui/main.qml:36
+#: ../contents/ui/main.qml:46
 #, kde-format
 msgid "Asr"
 msgstr "Аср"
 
-#: ../contents/ui/main.qml:37
+#: ../contents/ui/main.qml:47
 #, kde-format
 msgid "Maghrib"
 msgstr "Магриб"
 
-#: ../contents/ui/main.qml:38
+#: ../contents/ui/main.qml:48
 #, kde-format
 msgid "Isha"
 msgstr "Иша"
 
-#: ../contents/ui/main.qml:235
+#: ../contents/ui/main.qml:81
+#, kde-format
+msgid "%1 hr"
+msgid_plural "%1 hrs"
+msgstr[0] "%1 час"
+msgstr[1] "%1 часа"
+msgstr[2] "%1 часов"
+msgstr[3] "%1 часа"
+
+#: ../contents/ui/main.qml:85 ../contents/ui/main.qml:93
+#, kde-format
+msgid "%1 min"
+msgid_plural "%1 mins"
+msgstr[0] "%1 минута"
+msgstr[1] "%1 минуты"
+msgstr[2] "%1 минут"
+msgstr[3] "%1 минуты"
+
+#: ../contents/ui/main.qml:86
+#, kde-format
+msgid "%1 and %2"
+msgstr "%1 и %2"
+
+#: ../contents/ui/main.qml:243
 #, kde-format
 msgid "Next Prayer"
 msgstr "Следующий намаз"
 
-#: ../contents/ui/main.qml:269
+#: ../contents/ui/main.qml:275
 #, kde-format
 msgid "remaining"
 msgstr "осталось"
 
-#: ../contents/ui/main.qml:357
+#: ../contents/ui/main.qml:354
 #, kde-format
 msgid "Location: "
 msgstr "Местоположение: "
-
-#: ../contents/ui/Old_configGeneral.qml:134
-#, kde-format
-msgid ""
-"💡 Tip: Open Google Maps, right-click on your location, and copy the "
-"numbers. Use a dot (.) for decimals."
-msgstr ""
-"💡 Совет: Откройте Google Карты, нажмите правой кнопкой мыши на ваше местоположение и скопируйте координаты. Используйте точку (.) для десятичных дробей."
 
 #: ../contents/code/praytime.js:365
 #, kde-format
