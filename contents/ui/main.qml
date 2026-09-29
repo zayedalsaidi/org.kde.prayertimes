@@ -262,7 +262,7 @@ PlasmoidItem {
                         Item { Layout.fillHeight: true }
 
                         PlasmaComponents.Label {
-                            text: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds, "1")
+                            text: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)
                             font.pixelSize: Kirigami.Units.gridUnit * 1.4
                             font.bold: true
                             // font.family: "monospace"
