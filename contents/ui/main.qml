@@ -200,9 +200,9 @@ PlasmoidItem {
 
     fullRepresentation: Item {
         Layout.minimumWidth: Kirigami.Units.gridUnit * 16
-        Layout.minimumHeight: Kirigami.Units.gridUnit * 22
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 25
         Layout.preferredWidth: Kirigami.Units.gridUnit * 18
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 26
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 27
 
         ColumnLayout {
             anchors.fill: parent
@@ -264,7 +264,7 @@ PlasmoidItem {
 
                         PlasmaComponents.Label {
                             text: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)
-                            font.pixelSize: Kirigami.Units.gridUnit * 1.4
+                            font.pixelSize: Kirigami.Units.gridUnit * 1.2
                             font.bold: true
                             // font.family: "monospace"
                             color: Kirigami.Theme.highlightedTextColor
@@ -290,11 +290,14 @@ PlasmoidItem {
             Kirigami.Separator { Layout.fillWidth: true }
 
             ScrollView {
+                id: listScrollView
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+                ScrollBar.vertical.policy: ScrollBar.AlwaysOff
 
                 ColumnLayout {
-                    width: parent.width
+                    width: listScrollView.availableWidth
                     spacing: Kirigami.Units.smallSpacing
                     Repeater {
                         model: ["fajr", "sunrise", "dhuhr", "asr", "maghrib", "isha"]
@@ -310,10 +313,7 @@ PlasmoidItem {
                                    Kirigami.Theme.highlightColor : "transparent"
 
                             RowLayout {
-                                anchors.left: parent.left
-                                anchors.right: parent.right
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
+                                anchors.fill: parent
                                 anchors.leftMargin: Kirigami.Units.largeSpacing
                                 anchors.rightMargin: Kirigami.Units.largeSpacing
                                 spacing: Kirigami.Units.mediumSpacing
@@ -323,9 +323,7 @@ PlasmoidItem {
                                     font.bold: modelData === root.nextPrayerInfo.name
                                     color: modelData === root.nextPrayerInfo.name ? 
                                            Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                                    Layout.minimumWidth: Kirigami.Units.gridUnit * 8
-                                    Layout.maximumWidth: Kirigami.Units.gridUnit * 8
-                                    Layout.preferredWidth: Kirigami.Units.gridUnit * 8
+                                    Layout.fillWidth: true
                                     horizontalAlignment: Text.AlignLeft
                                     verticalAlignment: Text.AlignVCenter
                                 }
@@ -338,9 +336,7 @@ PlasmoidItem {
                                     font.family: "monospace"
                                     color: modelData === root.nextPrayerInfo.name ? 
                                            Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                                    Layout.minimumWidth: Kirigami.Units.gridUnit * 6
-                                    Layout.maximumWidth: Kirigami.Units.gridUnit * 6
-                                    Layout.preferredWidth: Kirigami.Units.gridUnit * 6
+                                    
                                     horizontalAlignment: Text.AlignRight
                                     verticalAlignment: Text.AlignVCenter
                                 }
