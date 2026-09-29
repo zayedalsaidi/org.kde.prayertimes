@@ -25,7 +25,8 @@ PlasmoidItem {
 
     // ✅ Native Plasma 6 Tooltips: Prevents overlap and lets the shell handle positioning automatically
     toolTipMainText: root.getPrayerName(root.nextPrayerInfo.name) + " " + (root.nextPrayerInfo.time || "--:--")
-    toolTipSubText: i18n("remaining") + ": " + root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
+    toolTipSubText: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds)
+
 
     // دالة مساعدة لضمان قراءة الإحداثيات كأرقام صحيحة
     function getValidCoord(val, defaultVal) {
@@ -55,6 +56,42 @@ PlasmoidItem {
         var m = Math.floor((seconds % 3600) / 60);
         return (h < 10 ? "0" + h : h) + ":" + 
                (m < 10 ? "0" + m : m);
+    }
+
+    function getFormattedCountdown(seconds, simple) {
+        var fmt = (Plasmoid.configuration && Plasmoid.configuration.countdownFormat) ? Plasmoid.configuration.countdownFormat : "1";
+        if (!seconds || seconds <= 0) seconds = 0;
+        if (!simple) simple = "0";
+        var totalMins = Math.floor(seconds / 60);
+        var h = Math.floor(totalMins / 60);
+        var m = totalMins % 60;
+
+        if (simple === "1") {
+            if (h > 0) {
+                return i18n("%1 hr %2 mins", h, m);
+            } else {
+                return i18n("%1 mins", m);
+            }
+        } else {
+            if (fmt === "2") {
+                // "Remaining: X hour and X minutes" or "Remaining: X minutes"
+                if (h > 0) {
+                    return i18n("%1 hr %2 mins remaining", h, m);
+                } else {
+                    return i18n("%1 mins remaining", m);
+                }
+            } else if (fmt === "3") {
+                // "In X hour and X minutes" or "In X minutes"
+                if (h > 0) {
+                    return i18n("In %1 hr %2 mins", h, m);
+                } else {
+                    return i18n("In %1 mins", m);
+                }
+            } else {
+                // Option 1: Digital format "Remaining: 00:00" or "Remaining: 01:15"
+                return i18n("Remaining: %1", root.formatCountdown(seconds));
+            }
+        }
     }
 
     function updateTimes() {
@@ -144,7 +181,7 @@ PlasmoidItem {
     compactRepresentation: Item {
         MouseArea {
             anchors.fill: parent
-            onClicked: Plasmoid.expanded = !Plasmoid.expanded
+            onClicked: root.expanded = !root.expanded
         }
 
         RowLayout {
@@ -225,10 +262,10 @@ PlasmoidItem {
                         Item { Layout.fillHeight: true }
 
                         PlasmaComponents.Label {
-                            text: root.formatCountdown(root.nextPrayerInfo.remainingSeconds)
-                            font.pixelSize: Kirigami.Units.gridUnit * 1.8
+                            text: root.getFormattedCountdown(root.nextPrayerInfo.remainingSeconds, "1")
+                            font.pixelSize: Kirigami.Units.gridUnit * 1.4
                             font.bold: true
-                            font.family: "monospace"
+                            // font.family: "monospace"
                             color: Kirigami.Theme.highlightedTextColor
                             Layout.alignment: Qt.AlignHCenter
                         }
@@ -236,8 +273,11 @@ PlasmoidItem {
                         PlasmaComponents.Label {
                             text: i18n("remaining")
                             font.pixelSize: Kirigami.Units.gridUnit * 0.8
-                            color: Kirigami.Theme.highlightedTextColor
                             opacity: 0.8
+                            color: Kirigami.Theme.highlightedTextColor
+                            wrapMode: Text.WordWrap
+                            horizontalAlignment: Text.AlignHCenter
+                            Layout.fillWidth: true
                             Layout.alignment: Qt.AlignHCenter
                         }
 
