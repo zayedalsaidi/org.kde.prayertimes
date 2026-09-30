@@ -353,7 +353,7 @@ msgstr "العشاء"
 msgid "%1 hr"
 msgid_plural "%1 hrs"
 msgstr[0] "%1 ساعة"
-msgstr[1] "ساعة واحدة"
+msgstr[1] "ساعة"
 msgstr[2] "ساعتان"
 msgstr[3] "%1 ساعات"
 msgstr[4] "%1 ساعة"
@@ -364,7 +364,7 @@ msgstr[5] "%1 ساعة"
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 دقيقة"
-msgstr[1] "دقيقة واحدة"
+msgstr[1] "دقيقة"
 msgstr[2] "دقيقتان"
 msgstr[3] "%1 دقائق"
 msgstr[4] "%1 دقيقة"
@@ -373,7 +373,7 @@ msgstr[5] "%1 دقيقة"
 #: ../contents/ui/main.qml:86
 #, kde-format
 msgid "%1 and %2"
-msgstr "%1 و%2"
+msgstr "%1 و %2"
 
 #: ../contents/ui/main.qml:243
 #, kde-format
